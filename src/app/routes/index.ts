@@ -7,6 +7,7 @@ import { ManagementRouter } from "../modules/management/management.route";
 import { EmployeeRouter } from "../modules/employee/employee.route";
 import { MissionRouter } from "../modules/mission/mission.route";
 import { VisionRouter } from "../modules/vision/vision.route";
+import { StatisticRouter } from "../modules/statistic/statistic.route";
 
 const router = Router();
 
@@ -15,6 +16,7 @@ const moduleRoutes = [
   { path: "/about", route: AboutRouter },
   { path: "/mission", route: MissionRouter },
   { path: "/vision", route: VisionRouter },
+  { path: "/statistic", route: StatisticRouter },
   { path: "/file", route: FileRouter },
   { path: "/teacher", route: TeacherRouter },
   { path: "/management", route: ManagementRouter },
