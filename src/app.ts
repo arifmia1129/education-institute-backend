@@ -4,6 +4,7 @@ import globalErrorHandler from "./app/middleware/globalErrorHandler";
 import router from "./app/routes";
 import httpStatus from "./shared/httpStatus";
 import cookieParser from "cookie-parser";
+import { translator } from "./shared/translator";
 
 const app: Application = express();
 
@@ -19,9 +20,10 @@ app.use(cors());
 app.use("/api/v1", router);
 
 app.get("/", async (req: Request, res: Response) => {
+  const result = await translator("My name is Arif", "bn");
   res.status(200).json({
     success: true,
-    message: "Server is running successfully",
+    message: result,
   });
 });
 

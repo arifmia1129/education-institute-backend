@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import { HydratedDocument, Model, Types } from "mongoose";
-import { IStudent } from "../student/student.interface";
 
 export type IUser = {
   id: string;
@@ -8,9 +7,9 @@ export type IUser = {
   password: string;
   changePasswordAt: Date;
   needChangePassword: boolean;
-  student: Types.ObjectId | IStudent;
-  faculty: Types.ObjectId | IStudent;
-  admin: Types.ObjectId | IStudent;
+  student: Types.ObjectId;
+  faculty: Types.ObjectId;
+  admin: Types.ObjectId;
 };
 
 export type IUserMethods = {
