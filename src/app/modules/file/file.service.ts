@@ -5,7 +5,6 @@ import { FileUploadHelper } from "../../../utils/uploader";
 const uploadFile = async (file: any) => {
   const res: ICloudinaryResponse | undefined =
     await FileUploadHelper.uploadToCloudinary(file);
-
   return res;
 };
 
