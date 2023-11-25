@@ -20,7 +20,7 @@ app.use(cors());
 app.use("/api/v1", router);
 
 app.get("/", async (req: Request, res: Response) => {
-  const result = await translator("My name is Arif", "bn");
+  const result = await translator("Server is running", "bn");
   res.status(200).json({
     success: true,
     message: result,

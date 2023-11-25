@@ -12,35 +12,35 @@ const TotalEmployeeSchema = new Schema<
 >(
   {
     allowedTeacher: {
-      type: String,
+      type: Number,
       required: true,
     },
     currentTeacher: {
-      type: String,
+      type: Number,
       required: true,
     },
     maleTeacher: {
-      type: String,
+      type: Number,
       required: true,
     },
     femaleTeacher: {
-      type: String,
+      type: Number,
       required: true,
     },
     allowedOtherEmployee: {
-      type: String,
+      type: Number,
       required: true,
     },
     currentOtherEmployee: {
-      type: String,
+      type: Number,
       required: true,
     },
     maleOtherEmployee: {
-      type: String,
+      type: Number,
       required: true,
     },
-    femaleOtherOtherEmployee: {
-      type: String,
+    femaleOtherEmployee: {
+      type: Number,
       required: true,
     },
   },

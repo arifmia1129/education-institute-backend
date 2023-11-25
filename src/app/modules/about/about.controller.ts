@@ -15,9 +15,11 @@ const getAbout = catchAsync(async (req: Request, res: Response) => {
 
   const result = await AboutService.getAboutService(paginationOptions);
 
-  const translated = await translator(result.data.history, ln);
+  if (result.data.history) {
+    const translated = await translator(result.data.history, ln);
 
-  result.data.history = translated;
+    result.data.history = translated;
+  }
 
   sendResponse<IAbout>(res, {
     statusCode: 200,

@@ -1,14 +1,14 @@
 import { HydratedDocument, Model } from "mongoose";
 
 export type ITotalEmployee = {
-  allowedTeacher: string;
-  currentTeacher: string;
-  maleTeacher: string;
-  femaleTeacher: string;
-  allowedOtherEmployee: string;
-  currentOtherEmployee: string;
-  maleOtherEmployee: string;
-  femaleOtherOtherEmployee: string;
+  allowedTeacher: number;
+  currentTeacher: number;
+  maleTeacher: number;
+  femaleTeacher: number;
+  allowedOtherEmployee: number;
+  currentOtherEmployee: number;
+  maleOtherEmployee: number;
+  femaleOtherEmployee: number;
 };
 
 export type ITotalEmployeeMethods = {
