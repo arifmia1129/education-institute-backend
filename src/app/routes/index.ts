@@ -13,6 +13,7 @@ import { PlaygroundRouter } from "../modules/playground/playground.route";
 import { MPORouter } from "../modules/mpo/mpo.route";
 import { NoticeRouter } from "../modules/notice/notice.route";
 import { ApplicationRouter } from "../modules/application/application.route";
+import { ExamRouter } from "../modules/exam/exam.route";
 
 const router = Router();
 
@@ -31,6 +32,7 @@ const moduleRoutes = [
   { path: "/mpo", route: MPORouter },
   { path: "/notice", route: NoticeRouter },
   { path: "/application", route: ApplicationRouter },
+  { path: "/exam", route: ExamRouter },
 ];
 
 moduleRoutes.forEach(route => router.use(route.path, route.route));
