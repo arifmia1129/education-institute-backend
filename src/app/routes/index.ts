@@ -15,6 +15,8 @@ import { NoticeRouter } from "../modules/notice/notice.route";
 import { ApplicationRouter } from "../modules/application/application.route";
 import { ExamRouter } from "../modules/exam/exam.route";
 import { StudentRouter } from "../modules/student/student.route";
+import { CocurricularRouter } from "../modules/cocurricular/cocurricular.route";
+import { TeachingRouter } from "../modules/teaching/teaching.route";
 
 const router = Router();
 
@@ -35,6 +37,8 @@ const moduleRoutes = [
   { path: "/application", route: ApplicationRouter },
   { path: "/exam", route: ExamRouter },
   { path: "/student", route: StudentRouter },
+  { path: "/cocurricular", route: CocurricularRouter },
+  { path: "/teaching", route: TeachingRouter },
 ];
 
 moduleRoutes.forEach(route => router.use(route.path, route.route));
