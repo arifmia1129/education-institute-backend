@@ -12,6 +12,7 @@ import { TotalEmployeeRouter } from "../modules/totalEmployee/totalEmployee.rout
 import { PlaygroundRouter } from "../modules/playground/playground.route";
 import { MPORouter } from "../modules/mpo/mpo.route";
 import { NoticeRouter } from "../modules/notice/notice.route";
+import { ApplicationRouter } from "../modules/application/application.route";
 
 const router = Router();
 
@@ -29,6 +30,7 @@ const moduleRoutes = [
   { path: "/playground", route: PlaygroundRouter },
   { path: "/mpo", route: MPORouter },
   { path: "/notice", route: NoticeRouter },
+  { path: "/application", route: ApplicationRouter },
 ];
 
 moduleRoutes.forEach(route => router.use(route.path, route.route));

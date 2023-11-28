@@ -6,20 +6,10 @@ import pick from "../../../shared/pick";
 import { INotice } from "./notice.interface";
 import { paginationField } from "../../constant/pagination";
 import { NoticeService } from "./notice.service";
-import { IUploadFile } from "../../../interfaces/common";
-import { FileService } from "../file/file.service";
 import { translator } from "../../../shared/translator";
 
 const createNotice = catchAsync(async (req: Request, res: Response) => {
-  const file = req.file as IUploadFile;
-  const fileRes = await FileService.uploadFile(file);
-  const { title, date } = req.body;
-
-  const result = await NoticeService.createNoticeService({
-    fileUrl: fileRes?.url as string,
-    title,
-    date,
-  });
+  const result = await NoticeService.createNoticeService(req.body);
 
   sendResponse<INotice>(res, {
     statusCode: 201,
