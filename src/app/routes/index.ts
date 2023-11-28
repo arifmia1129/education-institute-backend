@@ -14,6 +14,7 @@ import { MPORouter } from "../modules/mpo/mpo.route";
 import { NoticeRouter } from "../modules/notice/notice.route";
 import { ApplicationRouter } from "../modules/application/application.route";
 import { ExamRouter } from "../modules/exam/exam.route";
+import { StudentRouter } from "../modules/student/student.route";
 
 const router = Router();
 
@@ -33,6 +34,7 @@ const moduleRoutes = [
   { path: "/notice", route: NoticeRouter },
   { path: "/application", route: ApplicationRouter },
   { path: "/exam", route: ExamRouter },
+  { path: "/student", route: StudentRouter },
 ];
 
 moduleRoutes.forEach(route => router.use(route.path, route.route));
